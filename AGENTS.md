@@ -1,0 +1,2 @@
+- Keep Trivento as a single-page editorial property presentation because its narrative and lead flow depend on one continuous scroll.
+- Submit public property enquiries through a validated server function using privileged database access because visitors are anonymous and submissions must remain unreadable publicly.

@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791045736535,
+      "tag": "0000_create_contact_submissions",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791045771984,
+      "tag": "0001_add_contact_submission_rate_limit",
+      "breakpoints": true
+    }
+  ]
+}
