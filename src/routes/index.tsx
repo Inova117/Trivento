@@ -22,11 +22,11 @@ export const Route = createFileRoute("/")({
 });
 
 const interiors = [
-  { src: "/renders/trivento-interior-tv.jpeg.jpeg", alt: "Sala y comedor de un departamento Trivento" },
-  { src: "/renders/trivento-interior-isla.jpeg.jpeg", alt: "Cocina con isla y ventanal panorámico" },
-  { src: "/renders/trivento-interior-sala.jpeg.jpeg", alt: "Sala cálida con cocina integrada" },
-  { src: "/renders/trivento-interior-ventanal.jpeg.jpeg", alt: "Sala comedor iluminada por un gran ventanal" },
-  { src: "/renders/trivento-interior-comedor.jpeg.jpeg", alt: "Comedor y cocina de acabados claros" },
+  { src: "/renders/trivento-interior-tv.jpeg", alt: "Sala y comedor de un departamento Trivento" },
+  { src: "/renders/trivento-interior-isla.jpeg", alt: "Cocina con isla y ventanal panorámico" },
+  { src: "/renders/trivento-interior-sala.jpeg", alt: "Sala cálida con cocina integrada" },
+  { src: "/renders/trivento-interior-ventanal.jpeg", alt: "Sala comedor iluminada por un gran ventanal" },
+  { src: "/renders/trivento-interior-comedor.jpeg", alt: "Comedor y cocina de acabados claros" },
 ];
 
 function useReveal() {
@@ -102,7 +102,7 @@ function Index() {
   return (
     <main className="overflow-clip bg-background text-foreground">
       <section id="inicio" className="relative flex min-h-[92svh] flex-col justify-between overflow-hidden px-5 pb-8 pt-5 sm:px-8 lg:min-h-[96svh] lg:px-12 lg:pb-12">
-        <img src={"/renders/trivento-fachada.jpeg.jpeg"} alt="Fachada contemporánea del proyecto Trivento" className="parallax-image absolute inset-0 h-[112%] w-full object-cover" />
+        <img src={"/renders/trivento-fachada.jpeg"} alt="Fachada contemporánea del proyecto Trivento" className="parallax-image absolute inset-0 h-[112%] w-full object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <nav className="relative z-10 flex items-center justify-between text-background">
           <BrandMark light />
@@ -134,7 +134,7 @@ function Index() {
             <p className="mt-9 max-w-xl text-base leading-8 text-muted-foreground">Trivento emerge como un diálogo entre la modernidad y el entorno natural. Cada espacio ha sido concebido bajo una premisa de lujo sereno, luz abierta y respeto por el paisaje.</p>
           </div>
           <div className="overflow-hidden lg:col-span-5">
-            <img src={"/renders/trivento-vista.jpeg.jpeg"} alt="Terraza de Trivento con vista panorámica a los valles" className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.025]" loading="lazy" />
+            <img src={"/renders/trivento-vista.jpeg"} alt="Terraza de Trivento con vista panorámica a los valles" className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-[1.025]" loading="lazy" />
           </div>
         </Reveal>
       </section>
@@ -180,7 +180,7 @@ function Index() {
           </div>
           <p className="mt-4 text-xs text-muted-foreground">Valores e imágenes referenciales según la presentación comercial del proyecto.</p>
           <div className="mt-16 grid gap-7 sm:grid-cols-2">
-            {[{ src: "/renders/trivento-planta-1.jpeg.jpeg", alt: "Planta de departamento de un dormitorio con balcón" }, { src: "/renders/trivento-planta-2.jpeg.jpeg", alt: "Planta de departamento de un dormitorio con cocina abierta" }].map((planta) => (
+            {[{ src: "/renders/trivento-planta-1.jpeg", alt: "Planta de departamento de un dormitorio con balcón" }, { src: "/renders/trivento-planta-2.jpeg", alt: "Planta de departamento de un dormitorio con cocina abierta" }].map((planta) => (
               <figure key={planta.src} className="group">
                 <div className="overflow-hidden bg-card"><img src={planta.src} alt={planta.alt} className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" loading="lazy" /></div>
                 <figcaption className="mt-3 text-xs uppercase tracking-[0.14em] text-muted-foreground">Planta referencial · 1 dormitorio</figcaption>
@@ -191,7 +191,7 @@ function Index() {
       </section>
 
       <section className="relative min-h-[72svh] overflow-hidden">
-        <img src={"/renders/trivento-fachada-atardecer.jpeg.jpeg"} alt="Fachada completa de Trivento al atardecer" className="parallax-image absolute inset-0 h-[115%] w-full object-cover" loading="lazy" />
+        <img src={"/renders/trivento-fachada-atardecer.jpeg"} alt="Fachada completa de Trivento al atardecer" className="parallax-image absolute inset-0 h-[115%] w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gallery-overlay" />
         <Reveal className="relative z-10 mx-auto flex min-h-[72svh] max-w-7xl items-end px-5 pb-14 text-background sm:px-8 lg:px-12 lg:pb-20"><div className="max-w-2xl"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-background/70">06 — Ubicación</p><h2 className="font-display text-5xl leading-none sm:text-7xl">Naturaleza, a minutos de todo.</h2><p className="mt-6 text-sm uppercase tracking-[0.14em]">Av. Simón Bolívar, junto a la UIDE</p></div></Reveal>
       </section>
@@ -206,18 +206,18 @@ function Index() {
       <section className="px-5 py-24 sm:px-8 lg:px-12 lg:py-36">
         <div className="mx-auto max-w-7xl space-y-24 lg:space-y-36">
           <Reveal className="grid gap-8 lg:grid-cols-12 lg:items-center">
-            <div className="overflow-hidden lg:col-span-8"><img src={"/renders/trivento-fogata.jpeg.jpeg"} alt="Área social exterior con fogata y vegetación" className="aspect-[16/10] w-full object-cover transition-transform duration-700 hover:scale-[1.025]" loading="lazy" /></div>
+            <div className="overflow-hidden lg:col-span-8"><img src={"/renders/trivento-fogata.jpeg"} alt="Área social exterior con fogata y vegetación" className="aspect-[16/10] w-full object-cover transition-transform duration-700 hover:scale-[1.025]" loading="lazy" /></div>
             <div className="lg:col-span-4 lg:pl-8"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">02 — Encuentro</p><h3 className="font-display text-5xl">Social rooftop</h3><p className="mt-6 max-w-sm leading-7 text-muted-foreground">Espacios diseñados para compartir, donde la fogata, la madera y la vista se convierten en protagonistas.</p></div>
           </Reveal>
           <Reveal className="grid gap-8 lg:grid-cols-12 lg:items-center">
             <div className="order-2 lg:order-1 lg:col-span-4"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">03 — Experiencia</p><h3 className="font-display text-5xl">Cocina exterior</h3><p className="mt-6 max-w-sm leading-7 text-muted-foreground">Una cocina abierta y generosa para que cada encuentro suceda en contacto con el paisaje.</p></div>
-            <div className="order-1 overflow-hidden lg:order-2 lg:col-span-8"><img src={"/renders/trivento-cocina.jpeg.jpeg"} alt="Cocina exterior y comedor de Trivento" className="aspect-[16/10] w-full object-cover transition-transform duration-700 hover:scale-[1.025]" loading="lazy" /></div>
+            <div className="order-1 overflow-hidden lg:order-2 lg:col-span-8"><img src={"/renders/trivento-cocina.jpeg"} alt="Cocina exterior y comedor de Trivento" className="aspect-[16/10] w-full object-cover transition-transform duration-700 hover:scale-[1.025]" loading="lazy" /></div>
           </Reveal>
         </div>
       </section>
 
       <section className="relative min-h-[70svh] overflow-hidden">
-        <img src={"/renders/trivento-terraza.jpeg.jpeg"} alt="Terraza social rodeada de vegetación" className="parallax-image absolute inset-0 h-[115%] w-full object-cover" loading="lazy" />
+        <img src={"/renders/trivento-terraza.jpeg"} alt="Terraza social rodeada de vegetación" className="parallax-image absolute inset-0 h-[115%] w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gallery-overlay" />
         <Reveal className="relative z-10 mx-auto flex min-h-[70svh] max-w-7xl items-end px-5 pb-14 text-background sm:px-8 lg:px-12 lg:pb-20">
           <div className="max-w-2xl"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-background/70">Vive entre los valles</p><h2 className="font-display text-5xl leading-none sm:text-7xl">El exterior también es parte de tu hogar.</h2></div>
