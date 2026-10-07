@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Trivento | Vive entre los valles" },
-      { name: "description", content: "Departamentos con vista a los valles en San Martín Bolívar, junto a la UIDE." },
+      { name: "description", content: "Departamentos con vista a los valles en Av. Simón Bolívar, junto a la UIDE." },
       { property: "og:title", content: "Trivento | Vive entre los valles" },
       { property: "og:description", content: "Arquitectura contemporánea y espacios para vivir frente a los valles de Quito." },
       { property: "og:type", content: "website" },
@@ -102,7 +102,7 @@ function Index() {
   return (
     <main className="overflow-clip bg-background text-foreground">
       <section id="inicio" className="relative flex min-h-[92svh] flex-col justify-between overflow-hidden px-5 pb-8 pt-5 sm:px-8 lg:min-h-[96svh] lg:px-12 lg:pb-12">
-        <img src={"/renders/trivento-fachada.jpeg"} alt="Fachada contemporánea del proyecto Trivento" className="parallax-image absolute inset-0 h-[112%] w-full object-cover" />
+        <img src={"/renders/trivento-fachada.jpeg"} alt="Fachada contemporánea del proyecto Trivento" className="parallax-image absolute inset-x-0 -top-[6%] h-[112%] w-full object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <nav className="relative z-10 flex items-center justify-between text-background">
           <BrandMark light />
@@ -118,7 +118,7 @@ function Index() {
             </p>
           </div>
           <div className="mt-9 flex items-center justify-between border-t border-background/35 pt-4 text-[0.68rem] font-semibold uppercase tracking-[0.16em] sm:text-xs">
-            <span>San Martín Bolívar</span><span>Junto a la UIDE</span>
+            <span>Av. Simón Bolívar</span><span>Junto a la UIDE</span>
           </div>
         </div>
         <a href="#concepto" aria-label="Descubrir el proyecto" className="absolute bottom-8 right-1/2 z-10 hidden translate-x-1/2 text-background lg:block">
@@ -191,7 +191,7 @@ function Index() {
       </section>
 
       <section className="relative min-h-[72svh] overflow-hidden">
-        <img src={"/renders/trivento-fachada-atardecer.jpeg"} alt="Fachada completa de Trivento al atardecer" className="parallax-image absolute inset-0 h-[115%] w-full object-cover" loading="lazy" />
+        <img src={"/renders/trivento-fachada-atardecer.jpeg"} alt="Fachada completa de Trivento al atardecer" className="parallax-image absolute inset-x-0 -top-[6%] h-[115%] w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gallery-overlay" />
         <Reveal className="relative z-10 mx-auto flex min-h-[72svh] max-w-7xl items-end px-5 pb-14 text-background sm:px-8 lg:px-12 lg:pb-20"><div className="max-w-2xl"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-background/70">06 — Ubicación</p><h2 className="font-display text-5xl leading-none sm:text-7xl">Naturaleza, a minutos de todo.</h2><p className="mt-6 text-sm uppercase tracking-[0.14em]">Av. Simón Bolívar, junto a la UIDE</p></div></Reveal>
       </section>
@@ -217,7 +217,7 @@ function Index() {
       </section>
 
       <section className="relative min-h-[70svh] overflow-hidden">
-        <img src={"/renders/trivento-terraza.jpeg"} alt="Terraza social rodeada de vegetación" className="parallax-image absolute inset-0 h-[115%] w-full object-cover" loading="lazy" />
+        <img src={"/renders/trivento-terraza.jpeg"} alt="Terraza social rodeada de vegetación" className="parallax-image absolute inset-x-0 -top-[6%] h-[115%] w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gallery-overlay" />
         <Reveal className="relative z-10 mx-auto flex min-h-[70svh] max-w-7xl items-end px-5 pb-14 text-background sm:px-8 lg:px-12 lg:pb-20">
           <div className="max-w-2xl"><p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-background/70">Vive entre los valles</p><h2 className="font-display text-5xl leading-none sm:text-7xl">El exterior también es parte de tu hogar.</h2></div>
@@ -251,7 +251,7 @@ function Index() {
         </Reveal>
       </section>
 
-      <footer className="bg-primary px-5 py-10 text-primary-foreground sm:px-8 lg:px-12"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center"><BrandMark light /><p className="text-xs uppercase tracking-[0.14em] text-primary-foreground/60">San Martín Bolívar · Quito, Ecuador</p></div></footer>
+      <footer className="bg-primary px-5 py-10 text-primary-foreground sm:px-8 lg:px-12"><div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center"><BrandMark light /><p className="text-xs uppercase tracking-[0.14em] text-primary-foreground/60">Av. Simón Bolívar · Quito, Ecuador</p></div></footer>
     </main>
   );
 }
