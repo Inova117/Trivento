@@ -1,10 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useServerFn } from "@tanstack/react-start";
 import { ArrowDown, ArrowUpRight, Check, ChevronDown } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { contactSchema, submitContact } from "@/lib/contact.functions";
+import { contactSchema, whatsappLink } from "@/lib/contact";
 import { financing, places, typologies } from "@/lib/trivento-data";
 
 export const Route = createFileRoute("/")({
@@ -63,12 +62,11 @@ function BrandMark({ light = false }: { light?: boolean }) {
 }
 
 function Index() {
-  const sendContact = useServerFn(submitContact);
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
   const [whatsappUrl, setWhatsappUrl] = useState("");
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const raw = Object.fromEntries(new FormData(form));
@@ -78,25 +76,10 @@ function Index() {
       setMessage(parsed.error.issues[0]?.message ?? "Revisa los datos ingresados.");
       return;
     }
-    setStatus("sending");
-    setMessage("");
-    try {
-      await sendContact({ data: parsed.data });
-      form.reset();
-      const text = [
-        "Hola, quiero agendar una visita a Trivento.",
-        `Nombre: ${parsed.data.name}`,
-        `WhatsApp: ${parsed.data.whatsapp}`,
-        `Correo: ${parsed.data.email}`,
-        `Me interesa: ${parsed.data.propertyType}`,
-      ].join("\n");
-      setWhatsappUrl(`https://wa.me/593999011888?text=${encodeURIComponent(text)}`);
-      setStatus("success");
-      setMessage("Gracias. Recibimos tus datos y pronto nos pondremos en contacto.");
-    } catch (error) {
-      setStatus("error");
-      setMessage(error instanceof Error ? error.message : "No pudimos enviar tu solicitud.");
-    }
+    form.reset();
+    setWhatsappUrl(whatsappLink(parsed.data));
+    setStatus("success");
+    setMessage("Tus datos están listos. Envíalos por WhatsApp y te contactamos enseguida.");
   }
 
   return (

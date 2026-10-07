@@ -1,16 +1,11 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequest } from "@tanstack/react-start/server";
 import { createHash } from "crypto";
-import { z } from "zod";
 
-export const contactSchema = z.object({
-  name: z.string().trim().min(2, "Ingresa tu nombre.").max(100),
-  whatsapp: z.string().trim().regex(/^\+?[0-9 ()-]{7,30}$/, "Ingresa un WhatsApp válido."),
-  email: z.string().trim().email("Ingresa un correo válido.").max(255),
-  propertyType: z.enum(["1 dormitorio", "2 dormitorios", "3 dormitorios"]),
-});
+import { contactSchema } from "./contact";
 
-export type ContactInput = z.infer<typeof contactSchema>;
+export { contactSchema };
+export type { ContactInput } from "./contact";
 
 export const submitContact = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => contactSchema.parse(input))
