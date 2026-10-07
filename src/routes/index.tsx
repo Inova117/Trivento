@@ -141,12 +141,12 @@ function Index() {
 
       <section className="bg-primary px-5 py-24 text-primary-foreground sm:px-8 lg:px-12 lg:py-32">
         <Reveal className="mx-auto max-w-7xl">
-          <p className="mb-10 text-xs font-semibold uppercase tracking-[0.22em] text-primary-foreground/60">A diez minutos de todo</p>
+          <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.22em] text-primary-foreground/60 md:text-left">A minutos de todo</p>
           <div className="grid divide-y divide-primary-foreground/15 md:grid-cols-3 md:divide-x md:divide-y-0">
             {places.map((place, index) => (
-              <div key={place} className={`py-10 md:px-10 ${index === 0 ? "md:pl-0" : ""}`}>
+              <div key={place} className={`py-10 text-center md:px-10 md:text-left ${index === 0 ? "md:pl-0" : ""}`}>
               <span className="block font-display text-[8rem] leading-none text-accent lg:text-[10rem]">15</span>
-                <div className="mt-2 flex items-end justify-between gap-4">
+                <div className="mt-2 flex items-end justify-center gap-4 md:justify-between">
                   <span className="text-xs uppercase tracking-[0.2em]">{place}</span><span className="text-xs text-primary-foreground/50">min</span>
                 </div>
               </div>
